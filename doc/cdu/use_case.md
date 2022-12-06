@@ -3,7 +3,7 @@
 ## 1. Diagrama de Casos de Uso
 
 Imagem...
-![Casos de Uso](/assets/img/case_use_star_science.jpg "StarScience")
+![Casos de Uso](../assets/img/case_use_star_science.jpg "StarScience")
 
 ## 2. Listagem dos detalhamentos dos casos de uso
 
