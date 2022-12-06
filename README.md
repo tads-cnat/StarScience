@@ -12,7 +12,7 @@
 
 # Horário de Reuniões
 
-> Final de semana e final de sprint pelas 19:00
+> Final de semana e finais de sprint pelas 19:00
 
 # Tecnologias Utilizadas
 
