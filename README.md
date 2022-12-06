@@ -1,30 +1,28 @@
-# Título do Projeto
+# StarScience
 
-<img src="logo.png" width="200" height="200" />
+<img src="doc/assets/img/logo.png" width="200" height="200" />
 
->Inserir uma logo para o projeto
-
->Inserir pequena descrição do projeto
+> Projeto focado em ser uma rede social simples para debate de artigos científicos.
 
 # Equipe e Formas de Contato
 
-1. Nome...
-2. Nome...
-
->Descrever as formas de contato da equipe - WhatsApp, Discord, etc.
+> 1. [Davi Alessandro](https://github.com/davi-canuto)
+> 2. [Lucas Nithael](https://github.com/LucasNithael)
+> 3. [Italo](https://github.com/italommf)
 
 # Horário de Reuniões
 
->Descrever dias, horários e local das reuniões da equipe
+> Final de semana e final de sprint pelas 19:00
 
 # Tecnologias Utilizadas
 
->Enumerar as tecnoligas utilzadas no projeto
+> Pyhon, Django, HTML e CSS
 
 # Documentação
 
 [Link para os documentos do projeto](doc/documentacao.md)
 
+<!--
 # Manual da Desenvolvedor
 
->Descrever os comandos iniciais para começar a colaborar com o desenvolvimento do projeto
+> Descrever os comandos iniciais para começar a colaborar com o desenvolvimento do projeto -->

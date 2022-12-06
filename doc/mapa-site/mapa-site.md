@@ -1,4 +1,4 @@
-# Mapa do Site
+<!-- # Mapa do Site
 
 Obs.: propõem-se a utilização de alguma ferramenta que possibilite a representação textual do diagrama. Como o Seguinte exemplo:
 
@@ -10,4 +10,4 @@ flowchart TD
     B --- D[Página 1]
     B --- E[Página 2]
     B --- F[Página 3]
-```
+``` -->
