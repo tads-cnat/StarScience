@@ -1,0 +1,99 @@
+.center {
+  position: absolute;
+  width: 1430px;
+  height: 243px;
+  left: 3px;
+  top: 5px;
+
+  background: rgba(213, 182, 162, 0.5);
+  mix-blend-mode: normal;
+  filter: blur(2px);
+  border-radius: 20px;
+}
+
+html.body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.faq {
+  position: absolute;
+  width: 64px;
+  height: 30px;
+  left: 43px;
+  top: 19px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #000000;
+}
+
+.suport {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  left: 163px;
+  top: 19px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #000000;
+}
+
+.country {
+  position: absolute;
+  width: 48px;
+  height: 34px;
+  left: 314px;
+  top: 15px;
+}
+
+.publish {
+  position: absolute;
+  width: 325px;
+  height: 53px;
+  left: 623px;
+  top: 149px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+
+  color: #000000;
+}
+
+.profile_img {
+  position: absolute;
+  left: 87.22%;
+  right: 5.62%;
+  top: 5.66%;
+  bottom: 84.28%;
+
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.profile_name {
+  position: absolute;
+  width: 209px;
+  height: 30px;
+  left: 1203px;
+  top: 166px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #000000;
+}

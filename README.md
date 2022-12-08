@@ -1,6 +1,6 @@
 # StarScience
 
-<img src="doc/assets/img/logo.png" width="200" height="200" />
+<img src="assets/logo.png" width="200" height="200" />
 
 > Projeto focado em ser uma rede social simples para debate de artigos científicos.
 
