@@ -11,30 +11,39 @@ body {
 }
 
 .topper {
-  position: absolute;
-  width: 1480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
   height: 243px;
-  left: 3px;
-  top: 5px;
 
   background: rgba(213, 182, 162, 0.5);
   mix-blend-mode: normal;
   border-radius: 20px;
 }
+.topper .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topper .menu .options {
+  display: flex;
+}
+
+.topper .menu .options a {
+}
+
 .topper img {
-  position: absolute;
   width: 266px;
   height: 200px;
-  left: 48px;
-  top: 49px;
 }
 
 .topper a.faq {
-  position: absolute;
   width: 64px;
   height: 30px;
-  left: 40px;
-  top: 19px;
+  margin-right: 26px;
 
   font-family: "Inter";
   font-style: normal;
@@ -47,11 +56,9 @@ body {
 }
 
 .topper a.suport {
-  position: absolute;
   width: 95px;
   height: 30px;
-  left: 160px;
-  top: 19px;
+  margin-right: 20px;
 
   font-family: "Inter";
   font-style: normal;
@@ -64,11 +71,8 @@ body {
 }
 
 .topper a.country {
-  position: absolute;
   width: 48px;
   height: 30px;
-  left: 280px;
-  top: 19px;
   font-size: 25px;
   font-weight: 400;
   line-height: 30px;
@@ -76,95 +80,129 @@ body {
   text-decoration: none;
 }
 
-.topper a.perfil {
-  position: absolute;
-  width: 209px;
-  height: 30px;
-  left: 1203px;
-  top: 100px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 30px;
-  text-decoration: none;
-
-  color: #000000;
+.topper .title {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
 }
 
-.topper p {
-  position: absolute;
+.topper .title a {
   width: 325px;
   height: 53px;
-  left: 623px;
-  top: 149px;
 
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 41px;
+  text-decoration: none;
 
   color: #000000;
 }
 
+.topper .perfil {
+  justify-content: end;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 30px;
+  margin-right: 21px;
+
+  color: #000000;
+}
+
+.topper .perfil a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .search-bar {
-  position: absolute;
-  width: 1177px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 26px 131px;
   height: 73px;
-  left: 131px;
-  top: 275px;
 
   background: #d9d9d9;
   mix-blend-mode: normal;
   border-radius: 25px;
 }
 
-.search-bar a {
-  position: absolute;
+.search-bar .search-bar-content {
+  display: flex;
+  justify-content: space-around;
+
+  height: 100%;
+  flex-grow: 1;
+}
+.search-bar .search-bar-content .referency {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  justify-content: center;
+}
+
+.search-bar .search-bar-content .referency a {
   width: 447px;
-  height: 47px;
-  left: 258px;
-  top: 288px;
-  text-decoration: none;
 
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 47px;
-  /* identical to box height */
+  text-decoration: none;
 
   color: #000000;
 
   opacity: 0.75;
 }
-.search-bar div {
-  position: absolute;
-  width: 396px;
-  height: 73px;
-  left: 829px;
-  top: 275px;
+.search-bar .search-bar-content .advanced {
+  align-items: center;
 
+  display: flex;
+  height: 100%;
   background: rgba(213, 182, 162, 0.5);
 }
 
-.search-bar div.p {
-  position: absolute;
+.search-bar .search-bar-content .advanced .search {
+  margin-right: 8px;
+  align-items: center;
+
+  text-align: center;
+}
+.search-bar .search-bar-content .advanced p {
   width: 349px;
-  height: 47px;
-  left: 852px;
-  top: 288px;
 
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 47px;
-  /* identical to box height */
 
   color: #000000;
 
   opacity: 0.75;
+}
+
+.search-bar .search-bar-content .lupa-icon {
+  display: flex;
+  align-items: center;
+  background: #d9d9d9;
+}
+
+/* CENTER */
+
+.center {
+}
+
+.center .latest-articles {
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+
+.center .most-accessed {
 }
