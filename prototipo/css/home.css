@@ -1,26 +1,39 @@
-.center {
+body {
+  margin: 5px;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topper {
   position: absolute;
-  width: 1430px;
+  width: 1480px;
   height: 243px;
   left: 3px;
   top: 5px;
 
   background: rgba(213, 182, 162, 0.5);
   mix-blend-mode: normal;
-  filter: blur(2px);
   border-radius: 20px;
 }
-
-html.body {
-  height: 100%;
-  overflow-y: hidden;
+.topper img {
+  position: absolute;
+  width: 266px;
+  height: 200px;
+  left: 48px;
+  top: 49px;
 }
 
-.faq {
+.topper a.faq {
   position: absolute;
   width: 64px;
   height: 30px;
-  left: 43px;
+  left: 40px;
   top: 19px;
 
   font-family: "Inter";
@@ -28,15 +41,16 @@ html.body {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
+  text-decoration: none;
 
   color: #000000;
 }
 
-.suport {
+.topper a.suport {
   position: absolute;
   width: 95px;
   height: 30px;
-  left: 163px;
+  left: 160px;
   top: 19px;
 
   font-family: "Inter";
@@ -44,19 +58,42 @@ html.body {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
+  text-decoration: none;
 
   color: #000000;
 }
 
-.country {
+.topper a.country {
   position: absolute;
   width: 48px;
-  height: 34px;
-  left: 314px;
-  top: 15px;
+  height: 30px;
+  left: 280px;
+  top: 19px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
 }
 
-.publish {
+.topper a.perfil {
+  position: absolute;
+  width: 209px;
+  height: 30px;
+  left: 1203px;
+  top: 100px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 30px;
+  text-decoration: none;
+
+  color: #000000;
+}
+
+.topper p {
   position: absolute;
   width: 325px;
   height: 53px;
@@ -72,28 +109,62 @@ html.body {
   color: #000000;
 }
 
-.profile_img {
+.search-bar {
   position: absolute;
-  left: 87.22%;
-  right: 5.62%;
-  top: 5.66%;
-  bottom: 84.28%;
+  width: 1177px;
+  height: 73px;
+  left: 131px;
+  top: 275px;
 
-  background: rgba(0, 0, 0, 0.75);
+  background: #d9d9d9;
+  mix-blend-mode: normal;
+  border-radius: 25px;
 }
 
-.profile_name {
+.search-bar a {
   position: absolute;
-  width: 209px;
-  height: 30px;
-  left: 1203px;
-  top: 166px;
+  width: 447px;
+  height: 47px;
+  left: 258px;
+  top: 288px;
+  text-decoration: none;
 
-  font-family: "Inter";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
 
   color: #000000;
+
+  opacity: 0.75;
+}
+.search-bar div {
+  position: absolute;
+  width: 396px;
+  height: 73px;
+  left: 829px;
+  top: 275px;
+
+  background: rgba(213, 182, 162, 0.5);
+}
+
+.search-bar div.p {
+  position: absolute;
+  width: 349px;
+  height: 47px;
+  left: 852px;
+  top: 288px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  /* identical to box height */
+
+  color: #000000;
+
+  opacity: 0.75;
 }
