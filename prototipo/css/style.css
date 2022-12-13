@@ -200,9 +200,44 @@ body {
 }
 
 .center .latest-articles {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+  width: 60%;
+  height: 580px;
+  margin-left: 24px;
+
   background: #d9d9d9;
   border-radius: 20px;
 }
 
+.center .latest-articles .title {
+  align-items: center;
+  text-align: center;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
 .center .most-accessed {
+  display: flex;
+  flex-grow: 1;
+  background: rgba(213, 182, 162, 0.5);
+  border-radius: 20px;
+}
+
+.center .most-accessed .title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: justify;
+
+  color: #000000;
 }
