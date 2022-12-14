@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>StarScience</title>
+    <link rel="stylesheet" href="../../static/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="topper">
+      <div class="menu">
+        <div class="options">
+          <a href="#" class="faq">F.A.Q</a>
+          <a href="#" class="suport">Suporte</a>
+          <a href="#" class="country">Pais</a>
+        </div>
+        <div class="logo">
+          <a href="./home.html">
+            <img src="../../assets/logo_fundo.png" />
+          </a>
+        </div>
+      </div>
+      <div class="title">
+        <a href="./publish_article.html">Publicar Artigos</a>
+      </div>
+      <div class="perfil">
+        <img src="../../assets/profile.png" />
+        <a href="./my_profile.html"> Perfil </a>
+      </div>
+    </div>
+    <div class="my-profile">
+      <div class="informations">
+        <img src="../../assets/profile.png" />
+        <p>Alexandre Borbas</p>
+        <input
+          type="button"
+          onclick="alert('Troca de foto de perfil.')"
+          value="put_photo"
+        />
+        <input
+          type="button"
+          onclick="alert('Saindo do sistema.')"
+          value="exit"
+        />
+      </div>
+      <div class="infos-update">
+        <form>
+          <label for="name">Nome</label><br />
+          <input type="text" id="name" name="name" /><br />
+          <label for="email">Email</label><br />
+          <input type="text" id="email" name="email" />
+          <label for="password">Senha</label><br />
+          <input type="password" id="password" name="password" />
+          <label for="cpf">Email</label><br />
+          <input type="text" id="cpf" name="cpf" />
+        </form>
+      </div>
+      <div class="functions">
+        <a href="./my_articles.html"> Meus artigos publicados. </a>
+        <a href="./my_saves.html"> Meus salvos. </a>
+      </div>
+    </div>
+  </body>
+</html>
