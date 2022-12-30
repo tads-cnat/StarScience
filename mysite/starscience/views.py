@@ -40,3 +40,35 @@ class ArticleViews:
         c.save()
 
         return redirect('/listArticle')
+
+
+class KnowledgeAreaViews:
+     def listField(request):
+        knowledgearea_lists = KnowledgeArea.objects.all()
+        context = {'knowledgearea_lists': knowledgearea_lists}
+        #return render(request, '', context)
+
+    def formknowledgeArea(request):
+        #return render(request, '')
+
+    def saveknowledgeArea(request):
+        c = KnowledgeArea(name=request.POST['name'])
+        c.save()
+
+        #return redirect('')
+
+    def deleteKnowledgeArea(request, id):
+        c = KnowledgeArea.objects.get(pk=id)
+        c.delete()
+        #return redirect('')
+
+    def detailKnowledgeArea(request, id):
+        knowledgearea = KnowledgeArea.objects.get(pk=id)
+        #return render(request, '', {'knowledgearea': knowledgearea} )
+
+    def updateknowledgearea(request, id):
+        c = KnowledgeArea.objects.get(pk=id)
+        c.name = request.POST['name']
+        c.save()
+
+        #return redirect('')
