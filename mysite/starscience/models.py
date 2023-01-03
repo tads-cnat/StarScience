@@ -19,12 +19,23 @@ class Article(models.Model):
     description = models.CharField(max_length = 300)
     url = models.URLField(max_length = 300)
     likes = models.IntegerField()
+    category = models.CharField(max_length = 200)
 
     # Relationships
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return '({}) - {}'.format(self.id, self.title)
+
+    def search_article(self, attr_name, value):
+        attr = attr_name.lower()
+        if (attr == "title"):
+            query = self.objects.filter(title=value)
+        elif (attr == "category"):
+            query = self.objects.filter(category=value)
+        else:
+            query = self.objects.filter(user=value)
+        return query
 
 class SaveArticle(models.Model):
     created_at = models.DateField(auto_now_add = True)
