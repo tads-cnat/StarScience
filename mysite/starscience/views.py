@@ -1,9 +1,8 @@
 from django.shortcuts import redirect, render
 from .models import *
 
-class HomeViews:
-    def index(request):
-        return render(request, 'home.html')
+def index(request):
+    return render(request, 'home.html')
 
 class ArticleViews:
      def listArticle(request):
@@ -42,8 +41,8 @@ class ArticleViews:
 
         return redirect('/listArticle')
 
-    def searchArticle(request):
-        request.POST['']
+    # def searchArticle(request):
+    #     request.POST['']
 
 
 class KnowledgeAreaViews:

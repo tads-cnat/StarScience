@@ -3,22 +3,23 @@ from . import views
 
 app_name = 'starscience'
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='home'),
-    path('tema/<int:pk>/', views.TemaView.as_view(), name='tema'),
+    path('', views.index, name='home'),
+    path('article/<int:pk>/', views.ArticleViews.detailArticle, name='detail_article'),
     path(
-        'tema/adicionar',
-        views.NovoTemaView.as_view(), name='add_tema'
+        'article/adicionar',
+        views.ArticleViews.saveArticle, name='add_article'
     ),
     path(
-        'tema/<int:pk>/perguntar',
-        views.NovaPerguntaView.as_view(), name='add_perg'
+        'article/<int:pk>/atualizar',
+        views.ArticleViews.updateArticle, name='update_article'
     ),
     path(
-        'pergunta/<int:pk>/responder',
-        views.AdicionaRespostaView.as_view(), name='add_resp'
+        'article/<int:pk>/deletar',
+        views.ArticleViews.deleteArticle, name='delete_article'
     ),
     path(
-        'resposta/<int:pk>/votar',
-        views.VotarEmRespostaView.as_view(), name='vota_resp'
+        'article/form',
+        views.ArticleViews.formArticle, name='form_article'
     ),
+
 ]
