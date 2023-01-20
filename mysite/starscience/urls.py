@@ -1,25 +1,13 @@
 from django.urls import path
-from . import views
+from .views import article_index, article_create, article_show, article_update, article_delete
 
-app_name = 'starscience'
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('article/<int:pk>/', views.ArticleViews.detailArticle, name='detail_article'),
-    path(
-        'article/adicionar',
-        views.ArticleViews.saveArticle, name='add_article'
-    ),
-    path(
-        'article/<int:pk>/atualizar',
-        views.ArticleViews.updateArticle, name='update_article'
-    ),
-    path(
-        'article/<int:pk>/deletar',
-        views.ArticleViews.deleteArticle, name='delete_article'
-    ),
-    path(
-        'article/form',
-        views.ArticleViews.formArticle, name='form_article'
-    ),
+    # AS ARTICLE
+    path('articles/', article_index, name='article_index'),
+    path('articles/create/', article_create, name='article_create'),
+    path('articles/<int:id>/', article_show, name='article_show'),
+    path('articles/<int:id>/update/', article_update, name='article_update'),
+    path('articles/<int:id>/delete/', article_delete, name='article_delete'),
 
+    # # AS CATEGORY
 ]

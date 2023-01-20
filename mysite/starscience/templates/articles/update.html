@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StarScience</title>
+  </head>
+  <body>
+    <h1>Update Article</h1>
+    <form method="post" action="{% url 'article_update' object.id %}">
+      {% csrf_token %}
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" value="{{ object.title }}" />
+      <br />
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description">
+{{ object.description }}</textarea
+      >
+      <br />
+      <label for="url">Url:</label>
+      <input type="text" id="url" name="url" value="{{ object.url }}" />
+      <br />
+      <label for="likes">Likes:</label>
+      <input
+        type="number"
+        id="likes"
+        name="likes"
+        min="0"
+        value="{{ object.likes }}"
+      />
+      <br />
+      <input type="submit" value="Atualizar" />
+    </form>
+  </body>
+</html>

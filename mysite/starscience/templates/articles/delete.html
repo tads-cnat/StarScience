@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Delete Article</title>
+  </head>
+  <body>
+    <h1>Tem certeza que deseja excluir o artigo?</h1>
+    <form method="post" action="{% url 'article_delete' object.id %}">
+      {% csrf_token %}
+      <input type="submit" value="Delete" />
+    </form>
+  </body>
+</html>

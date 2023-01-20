@@ -18,11 +18,10 @@ class Article(models.Model):
     title = models.CharField(max_length = 200)
     description = models.CharField(max_length = 300)
     url = models.URLField(max_length = 300)
-    likes = models.IntegerField()
-    category = models.CharField(max_length = 200)
+    likes = models.IntegerField(default=0, null=True)
 
     # Relationships
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return '({}) - {}'.format(self.id, self.title)

@@ -1,77 +1,46 @@
-from django.shortcuts import redirect, render
-from .models import *
+from django.shortcuts import render, redirect
+from .models import Article
 
-def index(request):
-    return render(request, 'home.html')
+# REFERRING TO ARTICLE
 
-class ArticleViews:
-     def listArticle(request):
-        article_lists = Article.objects.all()
-        context = {'article_lists': article_lists}
-        return render(request, 'article/listArticle.html', context)
+def article_index(request):
+    objects = Article.objects.all()
+    return render(request, 'articles/index.html', {'objects': objects})
 
-    def formArticle(request):
-        return render(request, 'article/formArticle.html')
+def article_create(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        url = request.POST.get('url')
+        likes = request.POST.get('likes')
 
-    def saveArticle(request):
-        c = Article(title=request.POST['title'],
-                   description=request.POST['description'],
-                   url=request.POST['url'],
-                   likes=request.POST['likes'])
-        c.save()
+        Article.objects.create(title=title, description=description, url=url, likes=likes)
+        return redirect('article_index')
+    else:
+        return render(request, 'articles/create.html')
 
-        return redirect('/listArticle')
+def article_show(request, id):
+    obj = Article.objects.get(id=id)
+    return render(request, 'articles/show.html', {'object': obj})
 
-    def deleteArticle(request, id):
-        c = Article.objects.get(pk=id)
-        c.delete()
-        return redirect('/listArticle')
+def article_update(request, id):
+    obj = Article.objects.get(id=id)
+    if request.method == 'POST':
+        obj.title = request.POST.get('title')
+        obj.description = request.POST.get('description')
+        obj.url = request.POST.get('url')
+        obj.likes = request.POST.get('likes')
+        obj.save()
+        return redirect('article_index')
+    else:
+        return render(request, 'articles/update.html', {'object': obj})
 
-    def detailArticle(request, id):
-        article = Article.objects.get(pk=id)
-        return render(request, 'article/formEditArticle.html', {'article': article} )
+def article_delete(request, id):
+    obj = Article.objects.get(id=id)
+    if request.method == 'POST':
+        obj.delete()
+        return redirect('article_index')
+    else:
+        return render(request, 'articles/delete.html', {'object': obj})
 
-    def updateArticle(request, id):
-        c = Article.objects.get(pk=id)
-        c.title = request.POST['title']
-        c.description = request.POST['description']
-        c.url = request.POST['url']
-        c.likes = request.POST['likes']
-        c.save()
-
-        return redirect('/listArticle')
-
-    # def searchArticle(request):
-    #     request.POST['']
-
-
-class KnowledgeAreaViews:
-     def listField(request):
-        knowledgearea_lists = KnowledgeArea.objects.all()
-        context = {'knowledgearea_lists': knowledgearea_lists}
-        #return render(request, '', context)
-
-    def formknowledgeArea(request):
-        #return render(request, '')
-
-    def saveknowledgeArea(request):
-        c = KnowledgeArea(name=request.POST['name'])
-        c.save()
-
-        #return redirect('')
-
-    def deleteKnowledgeArea(request, id):
-        c = KnowledgeArea.objects.get(pk=id)
-        c.delete()
-        #return redirect('')
-
-    def detailKnowledgeArea(request, id):
-        knowledgearea = KnowledgeArea.objects.get(pk=id)
-        #return render(request, '', {'knowledgearea': knowledgearea} )
-
-    def updateknowledgearea(request, id):
-        c = KnowledgeArea.objects.get(pk=id)
-        c.name = request.POST['name']
-        c.save()
-
-        #return redirect('')
+#  REFERRING TO CATEGORY

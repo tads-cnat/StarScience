@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>StarScience</title>
+  </head>
+  <body>
+    <h1>Create Article</h1>
+
+    <form method="post" action="{% url 'article_create' %}">
+      {% csrf_token %}
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" />
+      <br />
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description"></textarea>
+      <br />
+      <label for="url">Url:</label>
+      <input type="text" id="url" name="url" />
+      <br />
+      <label for="likes">Likes:</label>
+      <input type="number" id="likes" name="likes" min="0" />
+      <br />
+      <input type="submit" value="Criar" />
+    </form>
+  </body>
+</html>
+4

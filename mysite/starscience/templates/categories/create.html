@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID =></th>
+      <th>Title =></th>
+      <th>Description =></th>
+      <th>Url =></th>
+      <th>Likes =></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for object in objects %}
+    <tr>
+      <td>{{ object.id }}</td>
+      <td>{{ object.title }}</td>
+      <td>{{ object.description }}</td>
+      <td>{{ object.url }}</td>
+      <td>{{ object.likes }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
