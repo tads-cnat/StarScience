@@ -1,23 +1,43 @@
-<h1>Articles</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>| Title</th>
-      <th>| Description</th>
-      <th>| Url</th>
-      <th>| Likes</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for object in objects %}
-    <tr>
-      <td>{{ object.id }}</td>
-      <td>{{ object.title }}</td>
-      <td>{{ object.description }}</td>
-      <td>{{ object.url }}</td>
-      <td>{{ object.likes }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>StarScience</title>
+  </head>
+  <body>
+    <div class="container">
+      {% block content %}
+      <h1 class="text-center my-5">Articles</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Url</th>
+            <th>Likes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for object in objects %}
+          <tr>
+            <td>{{ object.id }}</td>
+            <td>{{ object.title }}</td>
+            <td>{{ object.description }}</td>
+            <td>{{ object.url }}</td>
+            <td>{{ object.likes }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endblock %}
+    </div>
+  </body>
+</html>
