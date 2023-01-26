@@ -1,22 +1,64 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID =></th>
-      <th>Title =></th>
-      <th>Description =></th>
-      <th>Url =></th>
-      <th>Likes =></th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for object in objects %}
-    <tr>
-      <td>{{ object.id }}</td>
-      <td>{{ object.title }}</td>
-      <td>{{ object.description }}</td>
-      <td>{{ object.url }}</td>
-      <td>{{ object.likes }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+{% load static %}
+
+<head>
+  <title>StarScience</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="{% static 'assets/logo.png' %}"
+  />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'category_index' %}">
+      <img
+        src="{% static 'assets/logo_fundo.png' %}"
+        alt="Logo"
+        width="200px"
+        style="object-fit: contain"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+  </nav>
+
+  <div class="container my-5">
+      <h1 class="text-center">Criar Categoria</h1>
+      <form method="post" action="{% url 'category_create' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value="{{ object.name }}"
+            class="form-control"
+          />
+        </div>
+
+        <input
+          type="submit"
+          value="Criar"
+          class="btn btn-primary btn-block"
+        />
+      </form>
+    </div>
+</body>
+</html>

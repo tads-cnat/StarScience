@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>Delete Category</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/logo.png' %}"
+    />
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center">Tem certeza que deseja excluir a categoria?</h1>
+      <form method="post" action="{% url 'category_delete' object.id %}">
+        {% csrf_token %}
+        <div class="text-center my-3">
+          <form method="post" action="{% url 'category_delete' object.id %}">
+            {% csrf_token %}
+            <input type="submit" value="Excluir" class="btn btn-danger mr-2" />
+          </form>
+          <a href="{% url 'category_index' %}" class="btn btn-secondary"
+            >Voltar</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

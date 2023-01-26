@@ -1,22 +1,86 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID =></th>
-      <th>Title =></th>
-      <th>Description =></th>
-      <th>Url =></th>
-      <th>Likes =></th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for object in objects %}
-    <tr>
-      <td>{{ object.id }}</td>
-      <td>{{ object.title }}</td>
-      <td>{{ object.description }}</td>
-      <td>{{ object.url }}</td>
-      <td>{{ object.likes }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/logo.png' %}"
+    />
+    <title>StarScience</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img
+          src="{% static 'assets/logo_fundo.png' %}"
+          alt="Logo"
+          width="100px"
+          style="object-fit: contain"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-lg" href="{% url 'category_create' %}"
+              >Criar categoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-lg" href="{% url 'article_index' %}"
+              >Artigos</a
+            >
+          </li>
+        </ul>
+      </div>
+      <form class="form-inline my-2 my-lg-0"></form>
+    </nav>
+    <div class="container my-5">
+      {% block content %}
+      <h1 class="text-center my-5">Categorias</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nome</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for object in objects %}
+          <tr>
+            <td>{{ object.name }}</td>
+            <td>
+              <a
+                href="{% url 'category_delete' object.id %}"
+                class="btn btn-danger"
+                >Excluir</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endblock %}
+    </div>
+  </body>
+</html>

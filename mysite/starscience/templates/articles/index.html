@@ -46,12 +46,25 @@
               >Criar artigo</a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-lg" href="{% url 'category_index' %}"
+              >Categorias</a
+            >
+          </li>
         </ul>
       </div>
-      <form class="form-inline my-2 my-lg-0">
+      <form
+        class="form-inline my-2 my-lg-0"
+        method="post"
+        action="{% url 'article_search' %}"
+      >
+        {% csrf_token %}
+
         <input
           class="form-control mr-sm-2"
           type="search"
+          id="query"
+          name="query"
           placeholder="Pesquisar"
           aria-label="Search"
         />
@@ -68,6 +81,7 @@
           <tr>
             <th>Titulo</th>
             <th>Descrição</th>
+            <th>Categoria</th>
             <th>Opções</th>
           </tr>
         </thead>
@@ -76,6 +90,7 @@
           <tr>
             <td>{{ object.title }}</td>
             <td>{{ object.description }}</td>
+            <td>{{ object.category.name }}</td>
             <td>
               <a href="{% url 'article_show' object.id %}" class="btn btn-info"
                 >Visualizar</a

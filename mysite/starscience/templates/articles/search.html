@@ -1,9 +1,10 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>StarScience</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,6 +16,7 @@
       type="image/x-icon"
       href="{% static 'assets/logo.png' %}"
     />
+    <title>StarScience</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,7 +24,7 @@
         <img
           src="{% static 'assets/logo_fundo.png' %}"
           alt="Logo"
-          width="100px"
+          width="200px"
           style="object-fit: contain"
         />
       </a>
@@ -44,6 +46,11 @@
               >Criar artigo</a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-lg" href="{% url 'category_index' %}"
+              >Categorias</a
+            >
+          </li>
         </ul>
       </div>
       <form class="form-inline my-2 my-lg-0">
@@ -51,35 +58,51 @@
           class="form-control mr-sm-2"
           type="search"
           placeholder="Pesquisar"
-          aria-label="Pesquisar"
+          aria-label="Search"
         />
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
           Pesquisar
         </button>
       </form>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center text-black">{{ object.title }}</h1>
-          <hr />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p class="text-secondary">
-            <b>Descrição:</b> {{ object.description }}
-          </p>
-          <p class="text-secondary"><b>Url:</b> {{ object.url }}</p>
-          <p class="text-secondary"><b>Likes:</b> {{ object.likes }}</p>
-          <p class="text-secondary">
-            <b>Categoria:</b> {{ object.category.name }}
-          </p>
-          <p class="text-secondary">
-            <b>Criado em:</b> {{ object.created_at }}
-          </p>
-        </div>
-      </div>
+    <div class="container my-5">
+      {% block content %}
+      <h1 class="text-center my-5">Artigos</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for object in objects %}
+          <tr>
+            <td>{{ object.title }}</td>
+            <td>{{ object.description }}</td>
+            <td>{{ object.category.name }}</td>
+            <td>
+              <a href="{% url 'article_show' object.id %}" class="btn btn-info"
+                >Visualizar</a
+              >
+              <a
+                href="{% url 'article_update' object.id %}"
+                class="btn btn-warning"
+                >Atualizar</a
+              >
+              <a
+                href="{% url 'article_delete' object.id %}"
+                class="btn btn-danger"
+                >Excluir</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endblock %}
     </div>
   </body>
 </html>
