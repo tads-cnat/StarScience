@@ -10,6 +10,15 @@ body {
   box-sizing: border-box;
 }
 
+.article_create_buttom {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
 .topper {
   display: flex;
   justify-content: center;

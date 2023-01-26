@@ -1,33 +1,102 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>StarScience</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/logo.png' %}"
+    />
   </head>
   <body>
-    <h1>Update Article</h1>
-    <form method="post" action="{% url 'article_update' object.id %}">
-      {% csrf_token %}
-      <label for="title">Título:</label>
-      <input type="text" id="title" name="title" value="{{ object.title }}" />
-      <br />
-      <label for="description">Descrição:</label>
-      <textarea id="description" name="description">
-{{ object.description }}</textarea
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'article_index' %}">
+        <img
+          src="{% static 'assets/logo_fundo.png' %}"
+          alt="Logo"
+          width="100px"
+          style="object-fit: contain"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-      <br />
-      <label for="url">Url:</label>
-      <input type="text" id="url" name="url" value="{{ object.url }}" />
-      <br />
-      <label for="likes">Likes:</label>
-      <input
-        type="number"
-        id="likes"
-        name="likes"
-        min="0"
-        value="{{ object.likes }}"
-      />
-      <br />
-      <input type="submit" value="Atualizar" />
-    </form>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"></div>
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Pesquisar"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Pesquisar
+        </button>
+      </form>
+    </nav>
+    <div class="container my-5">
+      <h1 class="text-center">Atualizar Artigo</h1>
+      <form method="post" action="{% url 'article_update' object.id %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="title">Titulo:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value="{{ object.title }}"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Descrição:</label>
+          <textarea id="description" name="description" class="form-control">
+{{ object.description }}</textarea
+          >
+        </div>
+        <div class="form-group">
+          <label for="url">URL:</label>
+          <input
+            type="text"
+            id="url"
+            name="url"
+            value="{{ object.url }}"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="likes">Likes:</label>
+          <input
+            type="number"
+            id="likes"
+            name="likes"
+            min="0"
+            value="{{ object.likes }}"
+            class="form-control"
+          />
+        </div>
+        <input
+          type="submit"
+          value="Atualizar"
+          class="btn btn-primary btn-block"
+        />
+      </form>
+    </div>
   </body>
 </html>

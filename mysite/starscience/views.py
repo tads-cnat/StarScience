@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Article
+from .models import Article, Category
 
 class ArticleView:
     def article_index(request):
