@@ -79,3 +79,12 @@ class CategoryView:
             return redirect('category_index')
         else:
             return render(request, 'categories/delete.html', {'object': obj})
+
+    def category_update(request, id):
+        obj = Category.objects.get(id=id)
+        if request.method == 'POST':
+            obj.name = request.POST.get('name')
+            obj.save()
+            return redirect('category_index')
+        else:
+            return render(request, 'categories/update.html', {'object': obj})

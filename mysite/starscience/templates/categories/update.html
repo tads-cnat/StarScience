@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="{% url 'article_index' %}">
+      <a class="navbar-brand" href="{% url 'category_index' %}">
         <img
           src="{% static 'assets/logo_fundo.png' %}"
           alt="Logo"
@@ -51,43 +51,16 @@
       </form>
     </nav>
     <div class="container my-5">
-      <h1 class="text-center">Atualizar Artigo</h1>
-      <form method="post" action="{% url 'article_update' object.id %}">
+      <h1 class="text-center">Atualizar Categoria</h1>
+      <form method="post" action="{% url 'category_update' object.id %}">
         {% csrf_token %}
         <div class="form-group">
-          <label for="title">Titulo:</label>
+          <label for="name">Name:</label>
           <input
             type="text"
-            id="title"
-            name="title"
-            value="{{ object.title }}"
-            class="form-control"
-          />
-        </div>
-        <div class="form-group">
-          <label for="description">Descrição:</label>
-          <textarea id="description" name="description" class="form-control">
-{{ object.description }}</textarea
-          >
-        </div>
-        <div class="form-group">
-          <label for="url">URL:</label>
-          <input
-            type="text"
-            id="url"
-            name="url"
-            value="{{ object.url }}"
-            class="form-control"
-          />
-        </div>
-        <div class="form-group">
-          <label for="likes">Likes:</label>
-          <input
-            type="number"
-            id="likes"
-            name="likes"
-            min="0"
-            value="{{ object.likes }}"
+            id="name"
+            name="name"
+            value="{{ object.name }}"
             class="form-control"
           />
         </div>

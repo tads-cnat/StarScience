@@ -16,5 +16,6 @@ urlpatterns = [
     path('categories/', CategoryView.category_index, name='category_index'),
     path('categories/create/', CategoryView.category_create, name='category_create'),
     path('categories/<int:id>/delete/', CategoryView.category_delete, name='category_delete'),
+    path('categories/<int:id>/update/', CategoryView.category_update, name='category_update'),
 
 ]
