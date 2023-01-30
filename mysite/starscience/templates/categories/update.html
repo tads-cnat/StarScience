@@ -55,18 +55,13 @@
       <form method="post" action="{% url 'category_update' object.id %}">
         {% csrf_token %}
         <div class="form-group">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value="{{ object.name }}"
-            class="form-control"
-          />
+          <label for="name">Nome:</label>
+          <input id="name" name="name" class="form-control" {{ object.name }} />
         </div>
+
         <input
           type="submit"
-          value="Atualizar"
+          value="atualizar"
           class="btn btn-primary btn-block"
         />
       </form>

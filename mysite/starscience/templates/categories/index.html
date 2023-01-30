@@ -75,6 +75,11 @@
                 class="btn btn-danger"
                 >Excluir</a
               >
+              <a
+                href="{% url 'category_update' object.id %}"
+                class="btn btn-warning"
+                >Atualizar</a
+              >
             </td>
           </tr>
           {% endfor %}
