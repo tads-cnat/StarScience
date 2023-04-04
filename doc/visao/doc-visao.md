@@ -9,43 +9,42 @@
 | 27/10/2022 | **`1.0`** | Versão Inicial                                    | Lucas G, Lucas N, Italo, Davi |
 | 07/11/2022 | **`1.1`** | Doc. visão StarScience                            | Lucas G, Davi, Lucas N, Italo |
 | 03/12/2022 | **`1.2`** | Atualizações referentes à sessão dos casos de uso | Lucas N, Davi                 |
+| 04/04/2023 | **`2.0`** | Revisão para utilização em 2023.1                 | Joana Fernandes               |
 
 ### 1. Objetivo do Projeto
 
-O projeto **StarScience** tem como objetivo ser uma rede social específica para acadêmicos ou pessoas interessadas em discussões sobre artigos científicos de modo para que também sirva para aquele que deseja apenas procurar artigos de sua
-preferência.
+O projeto **StarScience** tem como objetivo ser uma rede social específica para acadêmicos ou pessoas interessadas em discussões sobre artigos científicos de modo que também sirva para aqueles que desejam apenas procurar artigos de sua preferência.
 
 ### 2. Descrição do problema
 
 | \_\_                        | \_\_                                                                                                                                                                         |
 | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **_O problema_**            | Falta de acesso simplificado e organização de artigos científicos da comunidade no geral.                                                                                    |
+| **_O problema_**            | Falta de acesso simplificado e organização de artigos científicos da comunidade em geral.                                                                                    |
 | **_afetando_**              | Estudantes, pesquisadores e qualquer pessoa que queira achar e organizar artigos para determinada área.                                                                      |
-| **_cujo impacto é_**        | Dificuldade de encontrar os artigos que procura, e organizar os artigos já lidos e avaliados.                                                                                |
-| **_Uma boa solução seria_** | Uma plataforma para organização de artigos científicos por usuário, onde será muito mais simples e didático encontrar trabalhos acadêmicos para determinada área ou assunto. |
+| **_cujo impacto é_**        | Dificuldade em encontrar artigos e organizar os que já foram lidos e avaliados.                                                                                |
+| **_Uma boa solução seria_** | Uma plataforma para organização de artigos científicos por usuário, onde será muito mais simples e didático encontrar trabalhos acadêmicos por determinada área e/ou assunto. |
 
 ### 3. Descrição dos usuários
 
 | Nome          | Descrição                                                                                     | Responsabilidades                                                                                                   |
 | :------------ | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
 | Administrador | Responsável por gerenciar a plataforma.                                                       | Gerenciar artigos, usuários, comentários e cadastrar categorias                                                     |
-| Usuário       | Visualizar artigos científicos, interagir com eles através de comentários, curtidas e salvos. | Administrar sua conta. Gerenciar artigos, comentários, sua biblioteca de artigos salvos e suas curtidas em artigos. |
+| Usuário       | Visualizar artigos científicos, comentar, curtir e salvar artigos. | Administrar sua conta. Gerenciar artigos, comentários, sua biblioteca de artigos salvos e suas curtidas em artigos. |
 
 ### 4. Descrição do ambiente dos usuários
 
-Por se tratar de um site voltado a área acadêmica no geral, é normal que tenham uma área minimamente confortável,
-com acesso a um computador e adequada para leitura.
+Ambiente simplificado para fácil usabilidade e fácil localização de conteúdo.
 
 Os artigos podem ser postados ou vistos a qualquer horário, assim sendo o sistema deve ter a capacidade de estar habilitado
 a receber requisições 24 horas por dia, durante os 7 dias da semana.
 
 ### 5. Principais necessidades dos usuários
 
-- Cientistas e pessoas que procuram artigos têm dificuldade de encontrar plataformas para conversação simplificada e troca de informações sobre artigos científicos, em busca da troca de informações os usuários recorrem a fóruns que não são amigáveis em sua maioria.
+- Cientistas e pessoas que procuram artigos têm dificuldade de encontrar plataformas para conversação simplificada e troca de informações sobre artigos científicos,  pois em sua maioria são fóruns não tão amigáveis.
 
-- Ao levantar os requisitos e necessidades do usuário através de pesquisas para o futuro desenvolvimento de uma plataforma que agrega artigos científicos em um único local, será possível efetuar a criação desse ambiente mais propício.
+- Ambiente propício a agregar artigos científicos de diversos tipos e áreas em um único local.
 
-- Maior facilidade de encontrar os artigos e salvar numa biblioteca, filtros personalizados para uma melhor busca e um ambiente de discussão aprimorado.
+- Possibilidade de salvar os artigos em uma biblioteca dentro da plataforma, com filtros personalizados para uma melhor busca e um ambiente de discussão aprimorado.
 
 ### 6. Alternativas concorrentes
 
@@ -65,9 +64,9 @@ https://www.elsevier.com/pt-br/solutions/scopus
 
 ### 7. Visão geral do produto
 
-- O site será capaz de selecionar os artigos através de um sistema de leitura e pesquisa por tags, utilizando referências, palavras chaves, data. Terá uma interface amigável e de fácil navegação. Seção para comentários aprimorada, com local para discussão dos artigos. Parte focada em visualização de artigos pessoais e artigos curtidos pelo usuário para fácil busca no futuro. Facilidade de publicação.
+- O site será capaz de selecionar os artigos através de um sistema de leitura e pesquisa por tags, utilizando referências, palavras chaves, data. Terá uma interface amigável e de fácil navegação. Seção para comentários aprimorada, com local para discussão dos artigos. Parte focada em visualização de artigos pessoais e artigos curtidos e/ou salvos pelo usuário para fácil busca posterior. Facilidade de publicação.
 
-- Ao se cadastrar, o usuário terá um breve tutorial de utilização da plataforma passando, desde a pesquisa e leitura, até a publicação de artigos.
+- Ao se cadastrar, o usuário terá um breve tutorial de utilização da plataforma, desde a pesquisa e leitura até a publicação de artigos.
 
 ### 8. Requisitos Funcionais
 
