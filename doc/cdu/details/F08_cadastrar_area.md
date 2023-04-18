@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Cadastrar Área - F10
+## Especificação do caso de uso - Cadastrar Área - F08
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
