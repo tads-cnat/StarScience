@@ -1,7 +1,7 @@
 ﻿
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Mudar Senha- F14
+## Especificação do caso de uso - Mudar Senha- F17
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
