@@ -1,7 +1,7 @@
 ﻿
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Salvar Artigo - F02
+## Especificação do caso de uso - Salvar Artigo - F13
 
 ### Histórico da Revisão 
 
