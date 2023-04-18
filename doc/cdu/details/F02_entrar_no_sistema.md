@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Entrar no Sistema - F08
+## Especificação do caso de uso - Entrar no Sistema - F02
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
