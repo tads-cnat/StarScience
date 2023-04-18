@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Buscar Artigo - F09
+## Especificação do caso de uso - Buscar Artigo - F11
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
