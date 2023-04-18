@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Visualizar Salvos - F13
+## Especificação do caso de uso - Visualizar Salvos - F15
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
