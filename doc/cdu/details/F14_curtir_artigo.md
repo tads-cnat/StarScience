@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Curtir Artigo - F03
+## Especificação do caso de uso - Curtir Artigo - F14
 
 ### Histórico da Revisão
 
