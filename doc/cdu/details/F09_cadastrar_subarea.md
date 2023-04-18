@@ -1,7 +1,7 @@
 ﻿
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Cadastrar Subárea - F17
+## Especificação do caso de uso - Cadastrar Subárea - F09
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
