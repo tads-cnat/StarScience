@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Gerenciar Usuário - F11
+## Especificação do caso de uso - Gerenciar Usuário - F05
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
