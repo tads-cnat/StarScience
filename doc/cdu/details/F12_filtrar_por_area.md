@@ -1,7 +1,7 @@
 ﻿
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Filtrar por área - F16
+## Especificação do caso de uso - Filtrar por área - F12
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
