@@ -1,7 +1,7 @@
 ﻿
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Cadastrar Comentário - F01
+## Especificação do caso de uso - Cadastrar Comentário - F10
 
 ### Histórico da Revisão 
 
