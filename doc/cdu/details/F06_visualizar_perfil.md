@@ -2,7 +2,7 @@
 
 # **Projeto StarScience**
 
-## Especificação do caso de uso - Visualizar Perfil - F05
+## Especificação do caso de uso - Visualizar Perfil - F06
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
