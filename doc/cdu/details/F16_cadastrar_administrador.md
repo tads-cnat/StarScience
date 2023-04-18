@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Cadastrar Administrador - F12
+## Especificação do caso de uso - Cadastrar Administrador - F16
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
