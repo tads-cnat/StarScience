@@ -1,6 +1,6 @@
 ﻿# **Projeto StarScience**
 
-## Especificação do caso de uso - Sair do Sistema - F06
+## Especificação do caso de uso - Sair do Sistema - F03
 ### Histórico da Revisão 
 
 |  Data  | Versão | Descrição | Autor |
