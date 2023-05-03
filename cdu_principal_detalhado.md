@@ -1,0 +1,59 @@
+# **Projeto StarScience**
+
+## Especificação do caso de uso - Cadastrar Artigo - F06
+
+### Histórico da Revisão 
+
+| Data       | Versão | Descrição       | Autor                               |
+| :--------- | :----- | :-------------- | :---------------------------------- |
+| 04/12/2022 | 1.00   | Primeira versão | Lucas Nithael                       |
+| 02/05/2022 | 1.1    | Detalhamento    | Virginia Menezes  e Joana Fernandes |
+
+### 1. Resumo:
+
+
+Este caso de uso é o principal do site, pois é o que possibilita que o usuário faça postagens de artigos na plataforma
+
+### 2. Atores :
+
+Usuários comuns e administradores
+
+### 3. Pré-condições:
+
+Os usuários devem estar cadastrados na plataforma.
+
+### 4.Pós-condições:
+
+Quando postado, o artigo deve aparecer rapidamente no feed do usuário. Os administradores podem visualizar ou deletar caso achem necessário
+
+### 5. Fluxos de evento:
+
+#### 5.1. Fluxo Principal :
+
+| Ator                                                         | Sistema                                                      |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| 1.  O usuário aciona a opção de cadastrar artigo sobre a interface |                                                              |
+|                                                              | 2. Abre uma nova página que permite preencher os campos que formam o artigo |
+| 3.  Preenche todos os campos obrigatórios, como título, parágrafos e upload do artigo. |                                                              |
+|                                                              | 4. Grava o que foi preenchido                                |
+| 5. Marca os campos de termos e no enviar                     |                                                              |
+|                                                              | 6. Volta para o feed com o artigo presente                   |
+
+#### 5.2. Fluxo de exceção:
+
+     a)Caso o usuário não preencha um campo obrigatório a opção de cadastrar deve ficar sem acesso
+
+### 6. Prototipos de Interface:
+
+`A ser desenvolvido pelo aluno.`
+
+### 7. Situações de Erro:
+
+	a)O usuário preenche errado ou deixa em branco um campo obrigatório.
+	b)o usuário faz upload de um arquivo, do qual ele não é o autor.
+
+### 8. Regras de Negócio:
+
+	1 - o usuário só pode postar um arquivo em pdf se for um dos autores do arquivo.
+	2 - Caso não seja autor, o usuário deve postar o link onde o arquivo está originalmente postado.
+
