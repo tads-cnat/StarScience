@@ -8,3 +8,4 @@ Clique em cada um dos links abaixo para acessar o artefato específico.
 1. [Modelo de Domínio](dominio/dominio.md)
 1. [Modelo de casos de uso](cdu/use_case.md)
 1. [Diagrama ER](diagrama/orm.md)
+1. [Tabela de Descrição de Riscos](descricao_de_riscos.md)
