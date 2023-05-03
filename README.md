@@ -6,9 +6,10 @@
 
 # Equipe e Formas de Contato
 
-> 1. [Davi Alessandro](https://github.com/davi-canuto)
-> 2. [Lucas Nithael](https://github.com/LucasNithael)
-> 3. [Italo](https://github.com/italommf)
+> 1. [Joana Fernandes](https://github.com/JoanaFernandes1998)
+> 2. [Paulo Henrique](https://github.com/HeroDestiny)
+> 3. [Tiago Assunção](https://github.com/TiagoAssuncaoCruz)
+> 4. [Virginia Menezes](https://github.com/VCLM)
 
 # Horário de Reuniões
 
@@ -16,7 +17,7 @@
 
 # Tecnologias Utilizadas
 
-> Pyhon, Django, HTML e CSS
+> Python, Django, Svelte, HTML e CSS
 
 # Documentação
 
