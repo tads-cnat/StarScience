@@ -11,10 +11,11 @@ class User(models.Model):
         return '({}) - {}'.format(self.id, self.name)
 
 class Category(models.Model):
-    name = models.CharField(max_length = 200, null=True)
+    name = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return '({}) - {}'.format(self.id)
+        return '({}) - {}'.format(self.id, self.name)
+
 
 class Article(models.Model):
     title = models.CharField(max_length = 200)
