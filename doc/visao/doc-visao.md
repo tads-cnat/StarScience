@@ -96,4 +96,4 @@ https://www.elsevier.com/pt-br/solutions/scopus
 | NF01   | Controle de acesso Usuário  | Segurança                                                                                                         | Segurança   | Obrigatório   |
 | NF02   | Tempo de resposta           | A comunicação entre o servidor e cliente tem de ser rápido                                                        | Performance | Desejável     |
 | NF03   | Design responsivo e prático | Uso de design responsivo e prático na interface gráfica, de modo que faça a navegação seja tranquila e didática.  | Usabilidade | Obrigatório   |
-| NF04   | Atendimento a lei LGPD      | Atendimento a lei LGPD na divulgação dos artigos, somente deixando links para os artigos da sua fonte verdadeira. | Legal       | Obrigatório   |
+| NF04   | Atendimento a lei LGPD      | Atendimento a lei LGPD na divulgação dos artigos, somente deixando links para os artigos da sua fonte verdadeira. | Segurança   | Obrigatório   |
