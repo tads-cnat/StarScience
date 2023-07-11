@@ -1,11 +1,15 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ArticleViewSet ,CategoryViewSet ,UserViewSet
+from .views import ArticleViewSet ,CategoryViewSet ,UserViewSet, SaveArticleViewSet,ArticleSearchViewSet
+from django.views.generic import TemplateView
 
 router = DefaultRouter()
 router.register('articles', ArticleViewSet)
 router.register('user', UserViewSet)
 router.register('category',CategoryViewSet)
+router.register('savearticles', SaveArticleViewSet)
+
+router.register(r'search', ArticleSearchViewSet, basename='search')
 
 urlpatterns = [
     path('', include(router.urls)),
