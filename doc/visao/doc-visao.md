@@ -93,7 +93,22 @@ https://www.elsevier.com/pt-br/solutions/scopus
 
 | Código | Nome                        | Descrição                                                                                                         | Categoria   | Classificação |
 | :----- | :-------------------------- | :---------------------------------------------------------------------------------------------------------------- | :---------- | :------------ |
-| NF01   | Controle de acesso Usuário  | Segurança                                                                                                         | Segurança   | Obrigatório   |
-| NF02   | Tempo de resposta           | A comunicação entre o servidor e cliente tem de ser rápido                                                        | Performance | Desejável     |
-| NF03   | Design responsivo e prático | Uso de design responsivo e prático na interface gráfica, de modo que faça a navegação seja tranquila e didática.  | Usabilidade | Obrigatório   |
-| NF04   | Atendimento a lei LGPD      | Atendimento a lei LGPD na divulgação dos artigos, somente deixando links para os artigos da sua fonte verdadeira. | Legal       | Obrigatório   |
+| NF01 | Precisão  | Os resultados apresentados pelo sistema devem ser precisos e consistentes, refletindo corretamente as informações dos artigos científicos. | Funcionalidade | Desejavel |
+| NF02 | Adequação | O sistema deve atender às necessidades dos usuários, fornecendo funcionalidades relevantes para busca, organização e interação com os artigos científicos. | Funcionalidade | Obrigatório |
+| NF03 | Disponibilidade | O sistema deve estar disponível para uso de forma contínua, com um tempo de inatividade mínimo planejado. | Confiabilidade | Desejavel |
+| NF04 | Tolerância a falhas | O sistema deve ser capaz de lidar com falhas, minimizando o impacto nos usuários e garantindo a recuperação adequada. | Confiabilidade | Desejavel |
+| NF05 | Compreensibilidade | A interface do usuário deve ser fácil de entender e utilizar, mesmo para usuários sem experiência técnica, proporcionando uma experiência intuitiva. | Usabilidade | Desejavel |
+| NF06 | Eficiência de uso| O sistema deve permitir que os usuários realizem suas tarefas de forma eficiente, sem a necessidade de realizar ações desnecessárias ou complexas.| Usabilidade | Desejavel |
+| NF07 | Tempo de resposta| O sistema deve responder rapidamente às ações dos usuários, proporcionando tempos de resposta curtos em operações como busca por artigos e carregamento de páginas.| Eficiência de desempenho | Desejavel |
+| NF08 | Utilização de recursos| O sistema deve ser otimizado para minimizar o consumo de recursos computacionais, como processamento, memória e largura de banda.| Eficiência de desempenho | Desejavel |
+| NF09 | Interoperabilidade| O sistema deve ser capaz de interoperar com outros sistemas e plataformas, permitindo a integração com fontes externas de artigos científicos e serviços relacionados.| Compatibilidade | Obrigatório |
+| NF10 | Confidencialidade| O sistema deve garantir a proteção dos dados pessoais dos usuários e das informações confidenciais contidas nos artigos científicos.| Segurança | Obrigatório |
+| NF11 | Integridade| O sistema deve garantir a integridade dos dados, evitando alterações não autorizadas ou corrupção dos artigos e informações relacionadas| Segurança | Obrigatório |
+
+### 10. Requisitos Arquiteturalmente Significantes (RAS)
+| Nome | Descrição |
+| :----- | :-------------------------- |
+| Escalabilidade | A capacidade do sistema de lidar com um grande número de usuários simultâneos e a carga de publicação e busca de artigos é um aspecto fundamental na definição da arquitetura. Isso envolve a consideração de escalabilidade vertical (aumento da capacidade dos recursos existentes) e escalabilidade horizontal (distribuição do sistema em múltiplos servidores). |
+| Segurança | A implementação de medidas de segurança robustas, como autenticação, autorização e criptografia de dados, requer considerações arquiteturais adequadas. A arquitetura deve ser projetada de forma a garantir a proteção adequada dos dados dos usuários e mitigar riscos de ataques cibernéticos. |
+| Confiabilidade | A arquitetura do sistema deve ser projetada com foco na confiabilidade, minimizando o tempo de inatividade e evitando falhas críticas que possam resultar em perda de dados ou interrupção dos serviços. Isso pode envolver a implementação de redundância, balanceamento de carga e estratégias de recuperação de falhas. |
+| Integração | A capacidade de integração com outras fontes de artigos científicos e bases de dados é um aspecto arquitetural importante. Isso requer a definição de interfaces, protocolos e mecanismos de troca de dados que permitam a importação e atualização de conteúdo de fontes externas confiáveis. |
