@@ -4,3 +4,4 @@ sqlparse==0.4.3
 django-bootstrap4
 djangorestframework==3.14.0
 django-cors-headers
+django_extensions
