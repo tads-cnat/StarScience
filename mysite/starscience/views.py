@@ -50,11 +50,12 @@ class ArticleSearchViewSet(viewsets.ViewSet):
                 title = article["dc:title"]
                 authors = article["dc:creator"]
                 doi = article["prism:doi"]
-                
+                year = article.get("prism:coverDate")
                 
                 results.append({
                     "title": title,
                     "authors": authors,
+                    "year": year,
                     "doi": doi
                     
                     
