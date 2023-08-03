@@ -24,6 +24,15 @@ class SaveArticleViewSet(viewsets.ModelViewSet):
     queryset = SaveArticle.objects.all()
     serializer_class = SaveArticleSerializer
 
+# In your Django view or middleware
+from django.http import HttpResponse
+
+def my_view(request):
+    response = HttpResponse()
+    response['Access-Control-Allow-Origin'] = 'http://localhost:5173'
+    response['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'  # Add any other allowed HTTP methods here
+    response['Access-Control-Allow-Headers'] = 'Content-Type'  # Add any other allowed headers here
+    return response
 
 # Definindo acesso a Elsevier Scopus Search.
 class ArticleSearchViewSet(viewsets.ViewSet):

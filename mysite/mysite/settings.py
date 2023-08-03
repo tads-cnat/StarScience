@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOWED_ORIGINS = [
     # Adicione aqui as origens permitidas, por exemplo:
-    'http://localhost:8080',  # domínio do aplicativo Svelte
+    'http://localhost:5173',  # domínio do aplicativo Svelte
 ]
 
 MIDDLEWARE = [
